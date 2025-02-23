@@ -1,0 +1,45 @@
+@startuml
+
+entity "Customer" as Customer {
+  +id: int [PK]
+  name: varchar
+  address: varchar
+  email: varchar
+  phone: varchar
+  password: varchar
+}
+
+entity "Vehicle" as Vehicle {
+  +id: int [PK]
+  vehicle_idn_no: varchar
+  status: varchar
+  model: varchar
+  manf_yr: year
+  vehicle_log: text
+}
+
+entity "Reservation" as Reservation {
+  +id: int [PK]
+  +customer_id: int [FK]
+  +vehicle_id: int [FK]
+  start_date: datetime
+  end_date: datetime
+  status: varchar
+}
+
+entity "VehicleType" as VehicleType {
+  +id: int [PK]
+  type_name: varchar
+}
+
+entity "ReservationStatus" as ReservationStatus {
+  +id: int [PK]
+  status_name: varchar
+}
+
+Customer ||--o{ Reservation : "has"
+Vehicle ||--o{ Reservation : "reserved by"
+VehicleType ||--|{ Vehicle : "categorizes"
+ReservationStatus ||--|{ Reservation : "determines"
+
+@enduml

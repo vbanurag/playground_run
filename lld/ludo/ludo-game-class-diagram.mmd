@@ -1,0 +1,205 @@
+classDiagram
+    class Game {
+        -GameManager game_manager
+        +start()
+    }
+    
+    class GameManager {
+        -GameBoard board
+        -Dice dice
+        -List~Player~ players
+        -int current_player_index
+        -List~GameObserver~ observers
+        -List~RuleDecorator~ rule_decorators
+        +create_players(num_players, human_players)
+        +add_observer(observer)
+        +notify_observers()
+        +get_game_state()
+        +next_player()
+        +play_turn()
+    }
+    
+    class GameBoard {
+        -List~Square~ squares
+        +setup_special_squares()
+        +get_start_position(color)
+        +get_square(position)
+        +move_token(token, steps)
+    }
+    
+    class Square {
+        -int position
+        -SquareType type
+        -List~Token~ tokens
+        +add_token(token)
+        +remove_token(token)
+        +get_tokens()
+    }
+    
+    class Player {
+        -string name
+        -Color color
+        -PlayerStrategy strategy
+        -List~Token~ tokens
+        +get_start_position()
+        +choose_token(roll)
+        +has_won()
+    }
+    
+    class Token {
+        -Color color
+        -int start_position
+        -int position
+        -TokenState state
+        +set_state(state)
+        +can_move(steps)
+        +move(steps)
+        +reset()
+    }
+    
+    class Dice {
+        +roll()
+    }
+    
+    class PlayerFactory {
+        +create_player(name, color, is_human)
+    }
+    
+    class TokenFactory {
+        +create_tokens(color, start_position)
+    }
+    
+    class TokenState {
+        <<interface>>
+        +move(token, steps)
+        +can_move(token, steps)
+    }
+    
+    class HomeState {
+        +move(token, steps)
+        +can_move(token, steps)
+    }
+    
+    class StartState {
+        +move(token, steps)
+        +can_move(token, steps)
+    }
+    
+    class RunningState {
+        +move(token, steps)
+        +can_move(token, steps)
+    }
+    
+    class SafeState {
+        +move(token, steps)
+        +can_move(token, steps)
+    }
+    
+    class Command {
+        <<interface>>
+        +execute()
+    }
+    
+    class RollCommand {
+        -Dice dice
+        +execute()
+    }
+    
+    class MoveCommand {
+        -Token token
+        -int steps
+        +execute()
+    }
+    
+    class KillCommand {
+        -Token token
+        -Token target_token
+        +execute()
+    }
+    
+    class PlayerStrategy {
+        <<interface>>
+        +choose_token(player, roll)
+    }
+    
+    class HumanStrategy {
+        +choose_token(player, roll)
+    }
+    
+    class ComputerStrategy {
+        +choose_token(player, roll)
+    }
+    
+    class GameObserver {
+        <<interface>>
+        +update(game_state)
+    }
+    
+    class ConsoleDisplayObserver {
+        +update(game_state)
+    }
+    
+    class GameStateObserver {
+        +update(game_state)
+    }
+    
+    class RuleDecorator {
+        <<interface>>
+        +apply_rules()
+    }
+    
+    class BonusTurnDecorator {
+        +apply_rules(player, roll)
+    }
+    
+    class KillBonusDecorator {
+        +apply_rules(player, token, killed)
+    }
+    
+    class Color {
+        <<enumeration>>
+        RED
+        GREEN
+        YELLOW
+        BLUE
+    }
+    
+    class SquareType {
+        <<enumeration>>
+        NORMAL
+        HOME
+        START
+        SAFE
+    }
+    
+    Game --> GameManager
+    GameManager --> GameBoard
+    GameManager --> Dice
+    GameManager --> Player
+    GameManager --> GameObserver
+    GameManager --> RuleDecorator
+    GameBoard --> Square
+    Player --> Token
+    Player --> PlayerStrategy
+    Token --> TokenState
+    
+    HomeState ..|> TokenState
+    StartState ..|> TokenState
+    RunningState ..|> TokenState
+    SafeState ..|> TokenState
+    
+    RollCommand ..|> Command
+    MoveCommand ..|> Command
+    KillCommand ..|> Command
+    
+    HumanStrategy ..|> PlayerStrategy
+    ComputerStrategy ..|> PlayerStrategy
+    
+    ConsoleDisplayObserver ..|> GameObserver
+    GameStateObserver ..|> GameObserver
+    
+    BonusTurnDecorator ..|> RuleDecorator
+    KillBonusDecorator ..|> RuleDecorator
+    
+    PlayerFactory ..> Player
+    TokenFactory ..> Token

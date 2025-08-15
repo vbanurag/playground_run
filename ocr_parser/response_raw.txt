@@ -1,0 +1,172 @@
+Here is the extracted structured invoice data in JSON format:
+
+```json
+{
+  "vendor": {
+    "name": "RAJ SUPER WHOLESALE BAZAR",
+    "address": "45, AMBA PRASAD TIWARI MARG, DAULATGANJ UAIN-MP-456001",
+    "contact": ["0734-4060723", "9993736333"],
+    "gstin": "23CTOPS449201ZX"
+  },
+  "invoice": {
+    "number": "CN3-2254",
+    "date": "27-Feb-2019"
+  },
+  "bill_to": {
+    "name": "RAJ DATA PROCESSORS",
+    "address": ""
+  },
+  "ship_to": {
+    "name": "RAJ DATA PROCESSORS",
+    "address": "45, DAULATGANJ, UJJAIN"
+  },
+  "line_items": [
+    {
+      "description": "SWADIST SOYA OIL ILTR (POUCH)",
+      "hsn": "",
+      "uom": "",
+      "quantity": 10,
+      "rate": 78.10,
+      "taxable_value": 780.95,
+      "cgst": {
+        "rate": 2.50,
+        "amount": 19.52
+      },
+      "sgst": {
+        "rate": 2.50,
+        "amount": 19.52
+      }
+    },
+    {
+      "description": "UFEBUOY SOAPILEMON) 125GM'4 94/",
+      "hsn": "",
+      "uom": "",
+      "quantity": 12,
+      "rate": 45.71,
+      "taxable_value": 548.57,
+      "cgst": {
+        "rate": 2.50,
+        "amount": 13.71
+      },
+      "sgst": {
+        "rate": 2.50,
+        "amount": 13.71
+      }
+    },
+    {
+      "description": "CAMEL TEA 500GM",
+      "hsn": "",
+      "uom": "",
+      "quantity": 12,
+      "rate": 76.27,
+      "taxable_value": 915.25,
+      "cgst": {
+        "rate": 9,
+        "amount": 576
+      },
+      "sgst": {
+        "rate": 9,
+        "amount": 576
+      }
+    },
+    {
+      "description": "DABUR HONEY 50GM3ZE",
+      "hsn": "",
+      "uom": "",
+      "quantity": 6,
+      "rate": 94.29,
+      "taxable_value": 565.72,
+      "cgst": {
+        "rate": 2.50,
+        "amount": 82.37
+      },
+      "sgst": {
+        "rate": 14.14,
+        "amount": 8237
+      }
+    },
+    {
+      "description": "6 GOLD COIN BREAD33/-",
+      "hsn": "",
+      "uom": "",
+      "quantity": 34.29,
+      "rate": 0.00,
+      "taxable_value": 68.57,
+      "cgst": {
+        "rate": 1.71,
+        "amount": 14.14
+      },
+      "sgst": {
+        "rate": 2.50,
+        "amount": 14.14
+      }
+    },
+    {
+      "description": "KISSAN TOMATO KETCHUP REFILL 450GMS0/",
+      "hsn": "",
+      "uom": "",
+      "quantity": 3,
+      "rate": 30.00,
+      "taxable_value": 90.00,
+      "cgst": {
+        "rate": 2.50,
+        "amount": 2.25
+      },
+      "sgst": {
+        "rate": 2.50,
+        "amount": 2.25
+      }
+    },
+    {
+      "description": "BRITANIA MUFFILLSCAKE 10/-",
+      "hsn": "",
+      "uom": "",
+      "quantity": 9,
+      "rate": 40.68,
+      "taxable_value": 81.36,
+      "cgst": {
+        "rate": 9,
+        "amount": 732
+      },
+      "sgst": {
+        "rate": 9,
+        "amount": 732
+      }
+    },
+    {
+      "description": "KHARAK SAGHARYATSPICAJIKG",
+      "hsn": "",
+      "uom": "",
+      "quantity": 1,
+      "rate": 8.48,
+      "taxable_value": 8.48,
+      "cgst": {
+        "rate": 9,
+        "amount": 0.76
+      },
+      "sgst": {
+        "rate": 9,
+        "amount": 0.76
+      }
+    },
+    {
+      "description": "KHARAK SAGHARYATSPICAJIKG",
+      "hsn": "",
+      "uom": "",
+      "quantity": 1,
+      "rate": 8.48,
+      "taxable_value": 8.48,
+      "cgst": {
+        "rate": 9,
+        "amount": 0.76
+      },
+      "sgst": {
+        "rate": 9,
+        "amount": 0.76
+      }
+    }
+  ]
+}
+```
+
+Note that some fields like `hsn`, `uom` are empty in the original text, so I have left them as is in the JSON output. Also, there are two identical line items for "KHARAK SAGHARYATSPICAJIKG", which might be a mistake in the original text.

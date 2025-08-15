@@ -1,0 +1,166 @@
+{
+  "vendor": {
+    "name": "RAJ SUPER WHOLESALE BAZAR",
+    "address": "45,AMBA PRASAD TIWARI MARG, DAULATGANJ UAIN-MP-456001",
+    "contact": [
+      "0734-4060723",
+      "9993736333"
+    ],
+    "gstin": "23CTOPS449201ZX WRFAMT de"
+  },
+  "invoice": {
+    "number": "CN3- 2254",
+    "date": "27-Feb-2019"
+  },
+  "bill_to": {
+    "name": "RAJ DATA PROCESSORS",
+    "address": ""
+  },
+  "ship_to": {
+    "name": "RAJ DATA PROCESSORS",
+    "address": "Add 45, DAULATGANJ, UJJAIN"
+  },
+  "bank_details": {
+    "bank_name": "BANK OF INDIA",
+    "account_number": "9100123456456",
+    "ifsc": "BKID00001901",
+    "upi_id": ""
+  },
+  "line_items": [
+    {
+      "description": "SWADIST SOYA OIL ILTR (POUCH)",
+      "hsn": "23- Madhya Pradesh",
+      "uom": "",
+      "quantity": 10,
+      "rate": 78.1,
+      "taxable_value": 780.95,
+      "cgst": {
+        "rate": 2.5,
+        "amount": 19.52
+      },
+      "sgst": {
+        "rate": 2.5,
+        "amount": 13.71
+      }
+    },
+    {
+      "description": "UFEBUOY SOAPILEMON) 125GM'4 94/",
+      "hsn": "",
+      "uom": "",
+      "quantity": 12,
+      "rate": 45.71,
+      "taxable_value": 548.57,
+      "cgst": {
+        "rate": 2.5,
+        "amount": 13.71
+      },
+      "sgst": {
+        "rate": 2.5,
+        "amount": 13.71
+      }
+    },
+    {
+      "description": "CAMEL TEA 500GM",
+      "hsn": "",
+      "uom": "",
+      "quantity": 12,
+      "rate": 76.27,
+      "taxable_value": 915.25,
+      "cgst": {
+        "rate": 9,
+        "amount": 576
+      },
+      "sgst": {
+        "rate": 9,
+        "amount": 576
+      }
+    },
+    {
+      "description": "DABUR HONEY 50GM3ZE",
+      "hsn": "",
+      "uom": "",
+      "quantity": 6,
+      "rate": 94.29,
+      "taxable_value": 565.72,
+      "cgst": {
+        "rate": 2.5,
+        "amount": 82.37
+      },
+      "sgst": {
+        "rate": 14.14,
+        "amount": 8237
+      }
+    },
+    {
+      "description": "6 GOLD COIN BREAD33/-",
+      "hsn": "",
+      "uom": "",
+      "quantity": 34.29,
+      "rate": 0.0,
+      "taxable_value": 68.57,
+      "cgst": {
+        "rate": 2.5,
+        "amount": 14.14
+      },
+      "sgst": {
+        "rate": 2.5,
+        "amount": 1.71
+      }
+    },
+    {
+      "description": "KISSAN TOMATO KETCHUP REFILL 450GMS0/",
+      "hsn": "",
+      "uom": "",
+      "quantity": 3,
+      "rate": 30.0,
+      "taxable_value": 90.0,
+      "cgst": {
+        "rate": 2.5,
+        "amount": 2.25
+      },
+      "sgst": {
+        "rate": 2.5,
+        "amount": 1.71
+      }
+    },
+    {
+      "description": "BRITANIA MUFFILLSCAKE 10/-",
+      "hsn": "",
+      "uom": "",
+      "quantity": 9,
+      "rate": 40.68,
+      "taxable_value": 81.36,
+      "cgst": {
+        "rate": 9,
+        "amount": 732
+      },
+      "sgst": {
+        "rate": 9,
+        "amount": 732
+      }
+    },
+    {
+      "description": "KHARAK SAGHARYATSPICAJIKG",
+      "hsn": "",
+      "uom": "",
+      "quantity": 1,
+      "rate": 8.48,
+      "taxable_value": 8.48,
+      "cgst": {
+        "rate": 9,
+        "amount": 0.76
+      },
+      "sgst": {
+        "rate": 9,
+        "amount": 0.76
+      }
+    }
+  ],
+  "total": {
+    "subtotal": 135.0,
+    "cgst_total": 146.78,
+    "sgst_total": 146.78,
+    "igst_total": 3473.0,
+    "grand_total": 3179.43
+  }
+}
